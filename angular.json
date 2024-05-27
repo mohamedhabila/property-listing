@@ -103,5 +103,8 @@
       }
     }
   },
-  "defaultProject": "property-listing"
+  "defaultProject": "property-listing",
+  "cli": {
+    "analytics": false
+  }
 }
