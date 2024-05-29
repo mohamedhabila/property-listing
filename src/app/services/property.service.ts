@@ -1,13 +1,14 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Property } from '../model/property';
+import { environment } from '../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PropertyService {
-
   properties: Property[];
+  private baseUrl = environment.apiUrl;
 
   property: Property = new Property();
 
@@ -16,27 +17,33 @@ export class PropertyService {
   }
 
   getPropertyById(id: number) {
-    return this.http.get<any>("http://localhost:8080/property/" + id);
+    return this.http.get<any>('${this.baseUrl}/property/' + id);
   }
 
   getPropertiesAll() {
-    return this.http.get<any[]>("http://localhost:8080/propertyall/");
+    return this.http.get<any[]>('${this.baseUrl}/propertyall/');
   }
 
   getPropertiesByLocation(locationId: number) {
-    return this.http.get<any[]>("http://localhost:8080/propertybylocation/" + locationId);
+    return this.http.get<any[]>(
+      '${this.baseUrl}/propertybylocation/' + locationId,
+    );
   }
 
   getPropertiesByCategory(categoryId: number) {
-    return this.http.get<any[]>("http://localhost:8080/propertybycategory/" + categoryId);
+    return this.http.get<any[]>(
+      '${this.baseUrl}/propertybycategory/' + categoryId,
+    );
   }
 
   getPropertiesByName(name: string) {
-    return this.http.get<any[]>("http://localhost:8080/propertybyname/" + name);
+    return this.http.get<any[]>('${this.baseUrl}/propertybyname/' + name);
   }
 
   getPropertiesByListFor(listFor: string) {
-    return this.http.get<any[]>("http://localhost:8080/propertybylisttype/" + listFor);
+    return this.http.get<any[]>(
+      '${this.baseUrl}/propertybylisttype/' + listFor,
+    );
   }
 
   getPropertiesByFiltering(formData: any) {
@@ -46,16 +53,17 @@ export class PropertyService {
     let listFor = formData.listFor;
 
     let params = new HttpParams()
-                .set("locationId", locationId)
-                .set("categoryId", categoryId)
-                .set("listFor", listFor)
-                .set("sortBy", sortBy);
+      .set('locationId', locationId)
+      .set('categoryId', categoryId)
+      .set('listFor', listFor)
+      .set('sortBy', sortBy);
 
-    return this.http.get<any[]>("http://localhost:8080/propertybyfiltering", {params} );
+    return this.http.get<any[]>('${this.baseUrl}/propertybyfiltering', {
+      params,
+    });
   }
 
   getPropertyReviews(propId: number) {
-    return this.http.get<any[]>("http://localhost:8080/propertyreview/" + propId);
+    return this.http.get<any[]>('${this.baseUrl}/propertyreview/' + propId);
   }
-
 }
