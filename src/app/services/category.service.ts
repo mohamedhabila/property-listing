@@ -16,7 +16,7 @@ export class CategoryService {
 
   setCategories() {
     this.http
-      .get<Category[]>('${this.baseUrl}/categories')
+      .get<Category[]>(`${this.baseUrl}/categories`)
       .subscribe((data: Category[]) => {
         this.categories = data;
       });

@@ -16,7 +16,7 @@ export class LocationService {
 
   setLocations() {
     this.http
-      .get<Location[]>('${this.baseUrl}/cities')
+      .get<Location[]>(`${this.baseUrl}/cities`)
       .subscribe((data: Location[]) => {
         this.locations = data;
       });

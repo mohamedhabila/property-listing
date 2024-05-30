@@ -19,11 +19,11 @@ export class AuthService {
   }
 
   signUp(user: any) {
-    return this.http.post<User>('${this.baseUrl}/signup', user);
+    return this.http.post<User>(`${this.baseUrl}/signup`, user);
   }
 
   signIn(user: any) {
-    return this.http.post<User>('${this.baseUrl}/login', user);
+    return this.http.post<User>(`${this.baseUrl}/login`, user);
   }
 
   signOut() {

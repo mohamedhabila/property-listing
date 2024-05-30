@@ -17,32 +17,32 @@ export class PropertyService {
   }
 
   getPropertyById(id: number) {
-    return this.http.get<any>('${this.baseUrl}/property/' + id);
+    return this.http.get<any>(`${this.baseUrl}/property/` + id);
   }
 
   getPropertiesAll() {
-    return this.http.get<any[]>('${this.baseUrl}/propertyall/');
+    return this.http.get<any[]>(`${this.baseUrl}/propertyall/`);
   }
 
   getPropertiesByLocation(locationId: number) {
     return this.http.get<any[]>(
-      '${this.baseUrl}/propertybylocation/' + locationId,
+      `${this.baseUrl}/propertybylocation/` + locationId,
     );
   }
 
   getPropertiesByCategory(categoryId: number) {
     return this.http.get<any[]>(
-      '${this.baseUrl}/propertybycategory/' + categoryId,
+      `${this.baseUrl}/propertybycategory/` + categoryId,
     );
   }
 
   getPropertiesByName(name: string) {
-    return this.http.get<any[]>('${this.baseUrl}/propertybyname/' + name);
+    return this.http.get<any[]>(`${this.baseUrl}/propertybyname/` + name);
   }
 
   getPropertiesByListFor(listFor: string) {
     return this.http.get<any[]>(
-      '${this.baseUrl}/propertybylisttype/' + listFor,
+      `${this.baseUrl}/propertybylisttype/` + listFor,
     );
   }
 
@@ -58,12 +58,12 @@ export class PropertyService {
       .set('listFor', listFor)
       .set('sortBy', sortBy);
 
-    return this.http.get<any[]>('${this.baseUrl}/propertybyfiltering', {
+    return this.http.get<any[]>(`${this.baseUrl}/propertybyfiltering`, {
       params,
     });
   }
 
   getPropertyReviews(propId: number) {
-    return this.http.get<any[]>('${this.baseUrl}/propertyreview/' + propId);
+    return this.http.get<any[]>(`${this.baseUrl}/propertyreview/` + propId);
   }
 }

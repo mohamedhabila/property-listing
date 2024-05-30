@@ -15,7 +15,7 @@ export class UserService {
 
   setWebsiteReviews() {
     this.http
-      .get<string[][]>('${this.baseUrl}/websitereviews')
+      .get<string[][]>(`${this.baseUrl}/websitereviews`)
       .subscribe((data: string[][]) => {
         this.reviews = data;
       });
