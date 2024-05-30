@@ -14,6 +14,8 @@ export class Property {
     locationId: number;
     listFor: string;
     images: Image[];
+    shares: number
+    remShares: number
 
     constructor() {
         this.id = 0;
@@ -27,5 +29,7 @@ export class Property {
         this.category = {id:0, name:''};
         this.listFor = '';
         this.images = [];
+        this.shares = 0;
+        this.remShares = 0;
     }
 }
