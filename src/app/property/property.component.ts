@@ -41,5 +41,13 @@ export class PropertyComponent implements OnInit {
   userReview(reviewForm: any) {
     
   }
-  
+
+  formatPrice(price: number) : string{
+    return price.toLocaleString(undefined, {
+        style: 'currency',
+        currency: 'EGP',
+        maximumFractionDigits: 0
+    });
+  }
+
 }
