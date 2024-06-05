@@ -110,19 +110,19 @@
             <div class="col-md-6 col-xl-3 d-flex justify-content-around"
                 *ngFor="let property of propService.properties.slice(0,4), let i = index">
                 <div class="card border-0 shadow position-relative" style="max-width: 25rem; border-radius: 15px;">
-                    <img src="../../assets/photoBuilding.png" class="card-img-top p-2" alt="buildings" />
+                    <img src="{{property.images[0].imageurl}}" class="card-img-top p-2" alt="{{ property.name }}" />
                     <div class="card-body">
+                        <span class="badge bg-secondary text-uppercase position-absolute end-0 me-3">{{ property.listFor }} </span>
+                        <div class="heading-small">{{ property.category.name }}</div>
                         <h5 class="card-title heading-small">
                             {{ property.name }}
-                            <span class="badge bg-secondary text-uppercase position-absolute end-0 me-3">{{
-                                property.listFor }}</span>
                         </h5>
                         <div class="card-text">
-                            <div class="heading-small">{{ property.category.name }}</div>
-                            <div class="content-small mt-3"><span><img src="../../assets/Rounded.png" alt="arrow"
-                                        class="img-fluid me-2" style="height: 20px;" /></span>{{ property.address.line1
-                                }} {{ property.address.line2 }}</div>
-                            <div class="content-small mt-1" style="margin-left: 30px;">{{ property.address.pincode }}
+                            <div class="content-small mt-3">
+                                <span>
+                                    <img src="../../assets/Rounded.png" alt="arrow" class="img-fluid me-2" style="height: 20px;" />
+                                </span>
+                                {{ property.address.line1 }} {{ property.address.line2 }}
                             </div>
                         </div>
                         <a routerLink="/property/{{property.id}}" class="btn btn-green mt-3">Have a Look</a>
