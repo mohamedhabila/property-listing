@@ -6,7 +6,6 @@ import { CategoryService } from '../services/category.service';
 import { DataSharingService } from '../services/data-sharing.service';
 import { LocationService } from '../services/location.service';
 import { PropertyService } from '../services/property.service';
-import { Image } from '../model/image';
 
 @Component({
   selector: 'app-property',
@@ -35,15 +34,8 @@ export class PropertyComponent implements OnInit {
 
   setProperty() {
     const propertyId = Number(this.route.snapshot.paramMap.get('propertyId'));
-    let img1 = new Image();
-    let img2 = new Image();
-    img1.id = 1;
-    img1.imageurl = "https://propertystock.s3.eu-central-1.amazonaws.com/chalet_Grand_Hills_1.jpeg";
-    img2.id = 2;
-    img2.imageurl = "https://propertystock.s3.eu-central-1.amazonaws.com/chalet_Grand_Hills_2.jpeg";
-    this.propService.property.images = [img1, img2];
-    // this.propService.getPropertyById(propertyId).subscribe((data: Property) => { this.propService.property = data });
-    // this.propService.getPropertyReviews(propertyId).subscribe((data: string[]) => { this.reviews = data });
+    this.propService.getPropertyById(propertyId).subscribe((data: Property) => { this.propService.property = data });
+    this.propService.getPropertyReviews(propertyId).subscribe((data: string[]) => { this.reviews = data });
   }
 
   userReview(reviewForm: any) {
