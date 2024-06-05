@@ -2,7 +2,7 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
   src: local("Segoe UI Semibold");
-  letter-spacing: 1.5px;
+  
 }
 
 .ftr {
@@ -27,7 +27,7 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
   src: local("Segoe UI Semibold");
-  letter-spacing: 2px;
+  
   font-size: 20px;
 }
 
@@ -36,6 +36,6 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
   src: local("Segoe UI Semibold");
-  letter-spacing: 2px;
+  
   font-size: 14px;
 }

@@ -6,7 +6,7 @@
 .heading-big {
   color: #016450;
   font-size: 2rem;
-  letter-spacing: 5px;
+  
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
@@ -27,14 +27,14 @@
   text-decoration: none;
   color: black;
   font-size: 2rem;
-  letter-spacing: 3px;
+  
   font-family: 'Noto Sans Arabic', sans-serif;
   
   line-height: 2rem;
 }
 
 .heading-med {
-  letter-spacing: 5px;
+  
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
@@ -48,7 +48,7 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 2px;
+  
   color: #999999;
   font-size: 14px;
 }
@@ -58,7 +58,7 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 1.5px;
+  
   color: #ffffff;
 }
 
@@ -67,7 +67,7 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 1.5px;
+  
   color: #016450;
 }
 

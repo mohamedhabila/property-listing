@@ -5,7 +5,7 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 2px;
+  
   color: rgba(153, 153, 153, 0.3);
 }
 .featuredes {
@@ -13,21 +13,21 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 2px;
+  
   color: #999999;
 }
 .cardtitledes {
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 2px;
+  
   font-size: 26px;
 }
 .aminities {
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 2px;
+  
   color: #999999;
 }
 .carddes {
@@ -39,7 +39,7 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 1.5px;
+  
   color: #ffffff;
 }
 .bscolor {
@@ -47,14 +47,14 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 1.5px;
+  
   color: #016450;
 }
 .button1 {
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 1.5px;
+  
   color: #016450;
   border: 2px solid #016450;
 }
@@ -62,11 +62,11 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
   src: local("Segoe UI Semibold");
-  letter-spacing: 2px;
+  
 }
 .billdesgt {
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 2px;
+  
 }

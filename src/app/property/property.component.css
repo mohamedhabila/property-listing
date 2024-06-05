@@ -3,7 +3,7 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 1.5px;
+  
   color: #ffffff;
 }
 
@@ -12,14 +12,14 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 1.5px;
+  
   color: #016450;
 }
 
 .des0 {
   margin-top: 150px;
   color: #016450;
-  letter-spacing: 5px;
+  
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
@@ -31,7 +31,7 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 2px;
+  
   color: #999999;
 }
 
@@ -39,7 +39,7 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 1.5px;
+  
   font-size: 38px;
 }
 
@@ -47,13 +47,13 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 2px;
+  
   color: #999999;
 }
 
 .cont-med {
   color: #999999;
-  letter-spacing: 1px;
+  
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
   src: local("Segoe UI SemiBold");
@@ -67,7 +67,7 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 1.5px;
+  
   font-size: 14px;
 }
 
@@ -87,7 +87,7 @@
   border-radius: 15px;
 }
 ::placeholder {
-  letter-spacing: 2px;
+  
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   

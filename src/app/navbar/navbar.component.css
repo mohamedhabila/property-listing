@@ -2,7 +2,7 @@
 .link-style {
   text-decoration: none;
   color: #999999;
-  letter-spacing: 3px;
+  
   font-weight: 700;
 }
 
@@ -11,7 +11,7 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 1.5px;
+  
   color: #ffffff;
 }
 
@@ -20,7 +20,7 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  letter-spacing: 1.5px;
+  
   color: #016450;
 }
 
