@@ -93,3 +93,8 @@
   
   color: rgba(1, 100, 80, 0.2);
 }
+
+.carousel-break {
+  height: 0.125rem;
+  background: #016450;
+}

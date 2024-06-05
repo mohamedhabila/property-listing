@@ -2,21 +2,22 @@
     <div class="row justify-content-around g-5">
         <app-carousel [images]="propService.property.images"></app-carousel>
     </div>
+    <div class="mx-auto mt-4 carousel-break" ></div>
     <!-- Body Text Start -->
     <div class="row mt-4">
         <div dir="rtl">
             <div class="row">
                 <h2 class="mt-4 titledes">{{propService.property.name}}</h2>
-            </div>
-            <h6 class="mt-3 featuredes">
-                <span>
-                    <img src="../../assets/Rounded.png" alt="arrow" class="img-fluid me-2" style="height: 20px" />
-                </span>
-                {{propService.property.address.line1 + " " + propService.property.address.line2}}
-            </h6>
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="img-fluid me-2"><path d="M38.5 32.25v-16.5a5 5 0 10-6.25-6.25h-16.5a5 5 0 10-6.25 6.25v16.5a5 5 0 106.25 6.25h16.5a5 5 0 106.25-6.25zm-6.25 3.25h-16.5a5 5 0 00-3.25-3.25v-16.5a5 5 0 003.25-3.25h16.5a5 5 0 003.25 3.25v16.5a5 5 0 00-3.25 3.25zM37 9a2 2 0 11-2 2 2 2 0 012-2zM11 9a2 2 0 11-2 2 2 2 0 012-2zm0 30a2 2 0 112-2 2 2 0 01-2 2zm26 0a2 2 0 112-2 2 2 0 01-2 2z"></path></svg>
-                {{propService.property.size}} m²
+                <h6 class="mt-3 featuredes">
+                    <span>
+                        <img src="../../assets/Rounded.png" alt="arrow" class="img-fluid" style="height: 20px" />
+                    </span>
+                    {{propService.property.address.line1 + " " + propService.property.address.line2}}
+                </h6>
+                <div dir="ltr" class="col-4 col-sm-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="img-fluid"><path d="M38.5 32.25v-16.5a5 5 0 10-6.25-6.25h-16.5a5 5 0 10-6.25 6.25v16.5a5 5 0 106.25 6.25h16.5a5 5 0 106.25-6.25zm-6.25 3.25h-16.5a5 5 0 00-3.25-3.25v-16.5a5 5 0 003.25-3.25h16.5a5 5 0 003.25 3.25v16.5a5 5 0 00-3.25 3.25zM37 9a2 2 0 11-2 2 2 2 0 012-2zM11 9a2 2 0 11-2 2 2 2 0 012-2zm0 30a2 2 0 112-2 2 2 0 01-2 2zm26 0a2 2 0 112-2 2 2 0 01-2 2z"></path></svg>
+                    {{propService.property.size}} m²
+                </div>
             </div>
             <h6 class="mt-4 titledes">{{formatPrice(propService.property.price)}}</h6>
             <div class="justify-content-start">
