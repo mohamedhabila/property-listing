@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ElementRef, HostListener } from '@angular/core';
 import { Lightbox } from 'ngx-lightbox';
 import { Image } from '../model/image';
 
@@ -10,8 +10,9 @@ import { Image } from '../model/image';
 export class CarouselComponent {
   @Input() images: Image[] = [];
   currentSlideIndex: number = 0;
+  private startX: number = 0;
 
-  constructor(private _lightbox: Lightbox) {}
+  constructor(private _lightbox: Lightbox, private el: ElementRef) {}
 
   openLightbox(index: number): void {
     const album = this.images.map(image => ({ src: image.imageurl, caption: this.buildCaption(image.imageurl), thumb: image.imageurl }));
@@ -70,5 +71,29 @@ export class CarouselComponent {
         this.currentSlideIndex = this.getActiveIndex();
       }
     }
+  }
+  @HostListener('touchstart', ['$event'])
+  onTouchStart(event: TouchEvent) {
+    this.startX = event.touches[0].clientX;
+  }
+
+  @HostListener('touchmove', ['$event'])
+  onTouchMove(event: TouchEvent) {
+    if (!this.startX) {
+      return;
+    }
+
+    const currentX = event.touches[0].clientX;
+    const diffX = this.startX - currentX;
+
+    if (diffX > 50) {
+      // Swiped left
+      this.navigate(this.el.nativeElement.Event, 1);
+    } else if (diffX < -50) {
+      // Swiped right
+      this.navigate(this.el.nativeElement.Event, -1);
+    }
+
+    this.startX = 0;
   }
 }
