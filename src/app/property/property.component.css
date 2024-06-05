@@ -1,17 +1,17 @@
 .blcolor {
   background-color: #016450;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 1.5px;
   color: #ffffff;
 }
 
 .bscolor {
   background-color: #ffffff;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 1.5px;
   color: #016450;
 }
@@ -20,33 +20,33 @@
   margin-top: 150px;
   color: #016450;
   letter-spacing: 5px;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   font-size: 24px;
 }
 
 .featuredes {
   font-size: 14px;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 2px;
   color: #999999;
 }
 
 .titledes {
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 1.5px;
   font-size: 38px;
 }
 
 .aminities {
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 2px;
   color: #999999;
 }
@@ -54,7 +54,7 @@
 .cont-med {
   color: #999999;
   letter-spacing: 1px;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
   src: local("Segoe UI SemiBold");
   font-size: medium;
@@ -64,9 +64,9 @@
 
 .cont-name {
   color: #016450;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 1.5px;
   font-size: 14px;
 }
@@ -88,8 +88,8 @@
 }
 ::placeholder {
   letter-spacing: 2px;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   color: rgba(1, 100, 80, 0.2);
 }

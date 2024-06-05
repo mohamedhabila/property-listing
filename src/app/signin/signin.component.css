@@ -15,15 +15,15 @@
 .h2 {
   color: #016450;
   letter-spacing: 5px;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   line-height: 3rem;
 }
 .h6 {
   color: #999999;
   padding-top: 15px;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
   src: local("Segoe UI Semibold");
   letter-spacing: 5px;
@@ -32,9 +32,9 @@
 .link {
   text-decoration: none;
   color: #016450;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 4.5px;
   margin-left: 5px;
 }
@@ -50,12 +50,12 @@
   letter-spacing: 2.5px;
 }
 .weig1 {
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
   src: local("Segoe UI Semibold");
 }
 .weig2 {
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 400;
   src: local("Segoe UI");
 }
@@ -67,7 +67,7 @@
   border-radius: 10px;
 }
 .form-control::placeholder {
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
   src: local("Segoe UI Semibold");
   color: #cacaca;

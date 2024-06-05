@@ -8,16 +8,16 @@
   color: #016450;
   letter-spacing: 5px;
   font-size: 2.8rem;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   line-height: 3rem;
 }
 
 .cont-med {
   color: #999999;
   letter-spacing: 1px;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
   src: local("Segoe UI SemiBold");
   font-size: medium;
@@ -26,7 +26,7 @@
 }
 
 .content-small {
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
   src: local("Segoe UI SemiBold");
   letter-spacing: 1.5px;
@@ -35,9 +35,9 @@
 
 .cont-name {
   color: #016450;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 1.5px;
   font-size: 14px;
 }
@@ -65,9 +65,9 @@
 .h2des {
   letter-spacing: 7px;
   font-size: 16px;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   color: #016450;
 }
 
@@ -81,9 +81,9 @@
 .fsdes {
   letter-spacing: 5px;
   font-size: 45px;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   color: rgba(153, 153, 153, 0.4);
 }
 
@@ -91,15 +91,15 @@
   margin-top: 70px;
   color: #016450;
   letter-spacing: 5px;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   font-size: 24px;
 }
 
 .label-style {
   border-radius: 7px;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
   src: local("Segoe UI SemiBold");
   letter-spacing: 1.5px;
@@ -139,7 +139,7 @@
 
 /* Button color and animation */
 .btnexp {
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
   src: local("Segoe UI SemiBold");
   background-color: #016450;
@@ -184,9 +184,9 @@
 
 .btn-green {
   background-color: #016450;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 1.5px;
   color: #ffffff;
 }
@@ -194,15 +194,15 @@
 
 .heading-med {
   letter-spacing: 5px;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
 }
 
 .heading-small {
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 1.5px;
   font-size: 18px;
 }

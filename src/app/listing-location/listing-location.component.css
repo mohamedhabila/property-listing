@@ -7,9 +7,9 @@
   color: #016450;
   font-size: 2rem;
   letter-spacing: 5px;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   line-height: 2rem;
 }
 
@@ -25,9 +25,9 @@
 
 .heading-med {
   letter-spacing: 5px;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
 }
 
 .card-price {
@@ -35,9 +35,9 @@
 }
 
 .aminities {
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 2px;
   color: #999999;
   font-size: 14px;
@@ -45,25 +45,25 @@
 
 .btn-green {
   background-color: #016450;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 1.5px;
   color: #ffffff;
 }
 
 .btn-lgrey {
   background-color: #e0ebed;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 1.5px;
   color: #016450;
 }
 
 .btn-content {
-  font-family: "Segoe UI";
-  src: local("Segoe UI Bold");
+  font-family: 'Noto Sans Arabic', sans-serif;
+  
   font-size: 14px;
 }
 

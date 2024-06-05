@@ -8,18 +8,18 @@
 
 .btn-green {
   background-color: #016450;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 1.5px;
   color: #ffffff;
 }
 
 .btn-white {
   background-color: #ffffff;
-  font-family: "Segoe UI";
+  font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
-  src: local("Segoe UI Bold");
+  
   letter-spacing: 1.5px;
   color: #016450;
 }
