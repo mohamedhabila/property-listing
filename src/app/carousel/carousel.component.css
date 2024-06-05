@@ -1,0 +1,40 @@
+.counter {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.carousel-inner {
+    height: 60vh; /* Set a default height relative to the viewport height */
+  }
+  
+  .carousel-item {
+    height: 100%;
+  }
+  
+  .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensure images cover the area without distorting the aspect ratio */
+  }
+  
+  /* Adjustments for different screen sizes */
+  @media (max-width: 1200px) {
+    .carousel-inner {
+      height: 40vh;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-inner {
+      height: 30vh;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .carousel-inner {
+      height: 25vh;
+    }
+  }
+  

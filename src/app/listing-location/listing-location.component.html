@@ -1,5 +1,5 @@
 <!-- Search Box -->
-<div class="container mt-3">
+<div class="container-fluid mt-3">
     <div id="form-container" class="row justify-content-center my-3 my-lg-0 ">
         <div class="col-12 col-md-8">
             <form (ngSubmit)="searchByName(searchForm)" #searchForm="ngForm" id="filter-form"
@@ -25,7 +25,7 @@
 
 
 <!-- HeroBox (Featured properties) Start -->
-<div id="feat-box" class="container my-5">
+<div id="feat-box" class="container-fluid my-5">
     <div class="row g-3 justify-content-start mb-5">
         <div id="feat-head" class="col-8 col-md-6 col-lg-5">
             <p class="heading-big pt-3 px-5">FEATURED</p>
@@ -134,7 +134,7 @@
 </div>
 
 <!-- Cards -->
-<div class="container my-5">
+<div class="container-fluid my-5">
     <div class="row g-4">
         <div class="col-12 col-md-6" *ngFor="let property of propService.properties.slice(1)">
             <div class="card border-0 shadow-lg" style="border-radius: 15px;">

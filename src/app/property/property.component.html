@@ -1,19 +1,6 @@
-<div class="container mt-5">
+<div class="container-fluid mt-5">
     <div class="row justify-content-around g-5">
-        <div class="col-9">
-            <img src="{{propService.property.images[0].imageurl}}" class="img-fluid h-100" />
-        </div>
-        <div class="col-3 shadow-lg rounded border-0">
-            <div class="card border-0">
-                <img src="../../assets/wishlistbuilding1.png" class="img-fluid my-3" />
-            </div>
-            <div class="card border-0">
-                <img src="../../assets/wishlistbuilding2.png" class="img-fluid mb-3" />
-            </div>
-            <div class="card border-0">
-                <img src="../../assets/wishlistbuilding1.png" class="img-fluid mb-3" />
-            </div>
-        </div>
+        <app-carousel [images]="propService.property.images"></app-carousel>
     </div>
     <!-- Body Text Start -->
     <div class="row mt-4">
@@ -95,7 +82,7 @@
     <!-- Action Btn Ends -->
 
     <!-- Review cards Start-->
-    <div class="container mb-5">
+    <div class="container-fluid mb-5">
         <h2 class="des0 text-center mb-5">REVIEWS</h2>
         <div class="row g-3 justify-content-around">
             <div class="col-md-4" *ngFor="let review of reviews, let i=index">
@@ -122,7 +109,7 @@
     <!-- Review cards End-->
 
     <!-- Review Form Start -->
-    <div class="container my-5">
+    <div class="container-fluid my-5">
         <div class="card border-0 shadow-lg mx-5" style="border-radius: 15px;">
             <h5 class="text-center mt-4">REVIEW</h5>
             <form (ngSubmit)="userReview(reviewForm)" #reviewForm="ngForm">

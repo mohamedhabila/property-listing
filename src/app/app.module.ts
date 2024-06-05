@@ -20,6 +20,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListingLocationComponent } from './listing-location/listing-location.component';
 import { ListingNameComponent } from './listing-name/listing-name.component';
 import { ListingTypeComponent } from './listing-type/listing-type.component';
+import { LightboxModule } from 'ngx-lightbox';
+import { CarouselComponent } from './carousel/carousel.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home/1', pathMatch: 'full' },
@@ -61,7 +63,8 @@ export const routes: Routes = [
     ListingsComponent,
     ListingLocationComponent,
     ListingNameComponent,
-    ListingTypeComponent
+    ListingTypeComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +74,7 @@ export const routes: Routes = [
     CommonModule,
     RouterModule.forRoot(routes),
     NgbModule,
+    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
