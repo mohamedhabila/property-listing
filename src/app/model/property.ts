@@ -16,6 +16,7 @@ export class Property {
     images: Image[];
     shares: number
     remShares: number
+    size: number
 
     constructor() {
         this.id = 0;
@@ -31,5 +32,6 @@ export class Property {
         this.images = [];
         this.shares = 0;
         this.remShares = 0;
+        this.size = 0;
     }
 }
