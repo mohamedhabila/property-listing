@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeComponent } from '../home/home.component';
 import { AuthService } from '../services/auth.service';
 import { DataSharingService } from '../services/data-sharing.service';
 import { LocationService } from '../services/location.service';

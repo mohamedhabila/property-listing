@@ -4,58 +4,19 @@
     </div>
     <!-- Body Text Start -->
     <div class="row mt-4">
-        <div class="row">
-            <div class="col-6">
-                <h2 class="mt-4 titledes">{{propService.property.name}}</h2>
-            </div>
-            <div class="col-3"></div>
-            <div class="col-3 mt-4">
-                <img src="https://propertystock.s3.eu-central-1.amazonaws.com/star.png"
-                    alt="stars" class="w-100">
-            </div>
-        </div>
         <h6 class="mt-3 featuredes">
             <span><img src="../../assets/Rounded.png" alt="arrow" class="img-fluid me-2"
                     style="height: 20px" /></span>{{propService.property.address.line1 + " " +
             propService.property.address.line2}}
         </h6>
+        <div class="row">
+            <div class="col-8">
+                <h2 class="mt-4 titledes">{{propService.property.name}}</h2>
+            </div>
+        </div>
         <h6 class="mt-4 titledes">{{propService.property.price}} {{propService.property.pDen}}</h6>
         <div class="d-flex justify-content-start">
             <div [innerHtml]="propService.property.description" class="me-2 mt-5 pe-5"></div>
-            <div class="me-2 mt-5 pe-5">
-                <h5 class="mb-5 aminities" style="font-size: 16px">
-                    <span class="me-4">
-                        <img src="../../assets/newimglisting/Icon awesome-shower.png" alt="arrow" class="img-fluid"
-                            style="height: 25px" /></span>Finished Baths
-                </h5>
-                <h5 class="mb-5 aminities" style="font-size: 16px">
-                    <span class="me-4">
-                        <img src="../../assets/newimglisting/Icon ionic-ios-bed.png" alt="arrow" class="img-fluid"
-                            style="height: 25px" /></span>Spacious Bedrooms
-                </h5>
-                <h5 class="mb-5 aminities" style="font-size: 16px">
-                    <span class="me-4">
-                        <img src="../../assets/newimglisting/Icon ionic-md-tv.png" alt="arrow" class="img-fluid"
-                            style="height: 25px" /></span>Luxuries Livings
-                </h5>
-            </div>
-            <div class="me-3 mt-5 aminities">
-                <h5 class="mb-5 aminities" style="font-size: 16px">
-                    <span class="me-4">
-                        <img src="../../assets/newimglisting/Icon awesome-parking.png" alt="arrow" class="img-fluid"
-                            style="height: 25px" /></span>Ample Parking Space
-                </h5>
-                <h5 class="mb-5 aminities" style="font-size: 16px">
-                    <span class="me-4">
-                        <img src="../../assets/newimglisting/Icon map-park.png" alt="arrow" class="img-fluid"
-                            style="height: 25px" /></span>Play Area
-                </h5>
-                <h5 class="mb-5 aminities" style="font-size: 16px">
-                    <span class="me-4">
-                        <img src="../../assets/newimglisting/Icon map-tennis.png" alt="arrow" class="img-fluid"
-                            style="height: 25px" /></span>Tennis Court
-                </h5>
-            </div>
         </div>
     </div>
     <!-- Body Text Ends -->

@@ -26,8 +26,8 @@ export class PropertyComponent implements OnInit {
 
 
   ngOnInit(): void {
-
     this.propService.property = new Property();
+    this.dataSharing.propertyFlag = true;
     this.setProperty();
 
   }
