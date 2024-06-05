@@ -1,7 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Category } from '../model/category';
 import { Property } from '../model/property';
 import { AuthService } from '../services/auth.service';
 import { CategoryService } from '../services/category.service';
@@ -36,7 +34,6 @@ export class PropertyComponent implements OnInit {
 
   setProperty() {
     const propertyId = Number(this.route.snapshot.paramMap.get('propertyId'));
-    console.log("yes");
     this.propService.getPropertyById(propertyId).subscribe((data: Property) => { this.propService.property = data });
     this.propService.getPropertyReviews(propertyId).subscribe((data: string[]) => { this.reviews = data });
   }

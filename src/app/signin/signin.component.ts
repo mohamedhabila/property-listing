@@ -35,7 +35,6 @@ export class SigninComponent implements OnInit {
 
     this.auth.signIn(this.user).subscribe(
       (res) => {
-        // console.log(res);
         if (res) {
           this.user = new User();
           signInForm.form.markAsPristine();

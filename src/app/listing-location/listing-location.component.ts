@@ -51,7 +51,6 @@ export class ListingLocationComponent implements OnInit {
 
   setProperties() {
     const locationId = Number(this.route.snapshot.paramMap.get('locationId'));
-    // console.log(name);
     this.propService.getPropertiesByLocation(locationId).subscribe((data: Property[]) => { this.propService.properties = data });
   }
 

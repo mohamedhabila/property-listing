@@ -47,7 +47,6 @@ export class HomeComponent implements OnInit {
 
   sendFormToListings(filterForm: any) {
     this.dataSharing.formData = filterForm.value;
-    console.log(this.dataSharing.formData);
     this.router.navigateByUrl('/listings');
   }
 

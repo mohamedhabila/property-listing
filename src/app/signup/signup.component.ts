@@ -33,7 +33,6 @@ export class SignupComponent implements OnInit {
 
     this.auth.signUp(this.user).subscribe(
       (res) => {
-        // console.log(res);
         if (res.userId != 0) {
           this.user = new User();
           signUpForm.form.markAsPristine();

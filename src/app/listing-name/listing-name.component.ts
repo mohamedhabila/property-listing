@@ -49,7 +49,6 @@ export class ListingNameComponent implements OnInit {
 
   setProperties() {
     const name = String(this.route.snapshot.paramMap.get('name'));
-    // console.log(name);
     this.propService.getPropertiesByName(name).subscribe((data: Property[]) => { this.propService.properties = data });
   }
 }
