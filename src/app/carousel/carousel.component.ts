@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef, HostListener } from '@angular/core';
+import { Component, Input, HostListener } from '@angular/core';
 import { Lightbox } from 'ngx-lightbox';
 import { Image } from '../model/image';
 
@@ -12,7 +12,7 @@ export class CarouselComponent {
   currentSlideIndex: number = 0;
   private startX: number = 0;
 
-  constructor(private _lightbox: Lightbox, private el: ElementRef) {}
+  constructor(private _lightbox: Lightbox) {}
 
   openLightbox(index: number): void {
     const album = this.images.map(image => ({ src: image.imageurl, caption: this.buildCaption(image.imageurl), thumb: image.imageurl }));
@@ -86,14 +86,25 @@ export class CarouselComponent {
     const currentX = event.touches[0].clientX;
     const diffX = this.startX - currentX;
 
-    if (diffX > 50) {
+    if (diffX > 100) {
       // Swiped left
-      this.navigate(this.el.nativeElement.Event, 1);
-    } else if (diffX < -50) {
+      this.navigate(event, 1);
+      this.startX = 0;
+    } else if (diffX < -100) {
       // Swiped right
-      this.navigate(this.el.nativeElement.Event, -1);
+      this.navigate(event, -1);
+      this.startX = 0;
     }
+  }
 
-    this.startX = 0;
+  @HostListener('window:keydown', ['$event'])
+  onKeyDown(event: KeyboardEvent) {
+    if (event.key === 'ArrowLeft') {
+      // Left arrow key pressed
+      this.navigate(event, 1);
+    } else if (event.key === 'ArrowRight') {
+      // Right arrow key pressed
+      this.navigate(event, -1);
+    }
   }
 }
