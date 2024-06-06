@@ -101,10 +101,10 @@ export class CarouselComponent {
   onKeyDown(event: KeyboardEvent) {
     if (event.key === 'ArrowLeft') {
       // Left arrow key pressed
-      this.navigate(event, 1);
+      this.navigate(event, -1);
     } else if (event.key === 'ArrowRight') {
       // Right arrow key pressed
-      this.navigate(event, -1);
+      this.navigate(event, 1);
     }
   }
 }
