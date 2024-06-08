@@ -50,7 +50,7 @@ export class PropertyService {
     let locationId = formData.cities;
     let categoryId = formData.categories;
     let sortBy = formData.sortBy;
-    let listFor = formData.listFor;
+    let listFor = 'buy'; //formData.listFor;
 
     let params = new HttpParams()
       .set('locationId', locationId)

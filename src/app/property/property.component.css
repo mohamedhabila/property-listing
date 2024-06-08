@@ -1,5 +1,5 @@
 .blcolor {
-  background-color: #016450;
+  background-color: #3f51b5;
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
@@ -13,12 +13,12 @@
   font-weight: 700;
   
   
-  color: #016450;
+  color: #3f51b5;
 }
 
 .des0 {
   margin-top: 150px;
-  color: #016450;
+  color: #3f51b5;
   
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
@@ -63,7 +63,7 @@
 }
 
 .cont-name {
-  color: #016450;
+  color: #3f51b5;
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
@@ -96,7 +96,7 @@
 
 .carousel-break {
   height: 0.125rem;
-  background: #016450;
+  background: #3f51b5;
 }
 .slider {
   width: 90%;

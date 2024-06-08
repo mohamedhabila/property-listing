@@ -13,7 +13,7 @@
   }
 }
 .h2 {
-  color: #016450;
+  color: #3f51b5;
   
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
@@ -31,7 +31,7 @@
 
 .link {
   text-decoration: none;
-  color: #016450;
+  color: #3f51b5;
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
@@ -42,7 +42,7 @@
   padding-top: 150px;
 }
 .color {
-  background-color: #016450;
+  background-color: #3f51b5;
   font-weight: bold;
   color: #ffffff;
 }

@@ -4,7 +4,7 @@
 }
 
 .heading-big {
-  color: #016450;
+  color: #3f51b5;
   font-size: 2rem;
   
   font-family: 'Noto Sans Arabic', sans-serif;
@@ -19,7 +19,7 @@
 }
 
 #search-btn {
-  background-color: #016450;
+  background-color: #3f51b5;
   color: #ffffff;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .btn-green {
-  background-color: #016450;
+  background-color: #3f51b5;
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
@@ -68,7 +68,7 @@
   font-weight: 700;
   
   
-  color: #016450;
+  color: #3f51b5;
 }
 
 .btn-content {

@@ -48,7 +48,7 @@ export class ListingTypeComponent implements OnInit {
   }
 
   setProperties() {
-    const listFor = String(this.route.snapshot.paramMap.get('listFor'));
+    const listFor = 'buy';// String(this.route.snapshot.paramMap.get('listFor'));
     this.propService.getPropertiesByListFor(listFor).subscribe((data: Property[]) => { this.propService.properties = data });
   }
 

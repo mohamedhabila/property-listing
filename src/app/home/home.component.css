@@ -5,7 +5,7 @@
 }
 
 .heading-big {
-  color: #016450;
+  color: #3f51b5;
   
   font-size: 2.8rem;
   font-family: 'Noto Sans Arabic', sans-serif;
@@ -34,7 +34,7 @@
 }
 
 .cont-name {
-  color: #016450;
+  color: #3f51b5;
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
@@ -58,8 +58,9 @@
 }
 
 #search-btn {
-  background-color: #016450;
+  background-color: #3f51b5;
   color: #ffffff;
+  width: 100%;
 }
 
 .h2des {
@@ -68,11 +69,11 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
-  color: #016450;
+  color: #3f51b5;
 }
 
 .btncolor {
-  background-color: #016450;
+  background-color: #3f51b5;
   font-weight: bold;
   color: #ffffff;
 }
@@ -89,7 +90,7 @@
 
 .des0 {
   margin-top: 70px;
-  color: #016450;
+  color: #3f51b5;
   
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
@@ -114,6 +115,7 @@
     position: absolute;
     top: 77%;
     left: 5%;
+    width: 100%;
   }
 }
 
@@ -142,7 +144,7 @@
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
   src: local("Segoe UI SemiBold");
-  background-color: #016450;
+  background-color: #3f51b5;
   font-weight: bold;
   
   color: #ffffff;
@@ -183,7 +185,7 @@
 }
 
 .btn-green {
-  background-color: #016450;
+  background-color: #3f51b5;
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 700;
   
