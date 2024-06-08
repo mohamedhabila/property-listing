@@ -42,9 +42,6 @@ export class ListingTypeComponent implements OnInit {
     this.propService.properties = [];
     this.setProperties();
 
-    for(let i=0; i<5;i++)
-      {this.stars[i]="fa fa-star checked";}
-
   }
 
   setProperties() {

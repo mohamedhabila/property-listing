@@ -15,7 +15,6 @@ import { PropertyService } from '../services/property.service';
 export class ListingsComponent implements OnInit {
 
   propName: string = '';
-  stars: string[]=[];
 
   constructor(public locationService: LocationService,
     public categoryService: CategoryService,
@@ -44,8 +43,29 @@ export class ListingsComponent implements OnInit {
     this.propService.properties =[];
     this.propService.getPropertiesByFiltering(this.dataSharing.formData).subscribe((data: Property[]) => { this.propService.properties = data });
 
-    for(let i=0; i<5;i++)
-      {this.stars[i]="fa fa-star checked";}
+  }
 
+  formatPrice(price: number) : string{
+    return price.toLocaleString(undefined, {
+        style: 'currency',
+        currency: 'EGP',
+        maximumFractionDigits: 0
+    });
+  }
+
+  buildCaption(url : string) : string {
+    // Use URL constructor to handle the URL
+    const urlObject = new URL(url);
+
+    // Get the pathname from the URL (e.g., "/imagename.jpeg")
+    const pathname = urlObject.pathname;
+
+    // Split the pathname by '/' and get the last part
+    const fullImageName = pathname.substring(pathname.lastIndexOf('/') + 1);
+
+    // Split the full image name by '.' and remove the last part (the extension)
+    const imageNameWithoutExtension = fullImageName.split('.').slice(0, -1).join('.');
+
+    return imageNameWithoutExtension;
   }
 }

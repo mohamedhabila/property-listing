@@ -26,83 +26,49 @@
 <!-- HeroBox (Featured properties) Start -->
 <div id="feat-box" class="container my-5">
     <div class="row g-3 justify-content-start mb-5">
-        <div id="feat-head" class="col-8 col-md-6 col-lg-5">
-            <p class="heading-big pt-3 px-5">FEATURED</p>
+        <div id="feat-head" class="w-100">
+            <p class="heading-big pt-3 px-5">Results</p>
         </div>
     </div>
     <div class="row">
         <div class="col-12">
-            <div class="card border-0 shadow-lg mb-3">
+            <div class="card border-0 shadow-lg mb-3" *ngFor="let property of propService.properties">
                 <div class="row justify-content-between border-0 g-3 me-2">
                     <div class="col-md-4 align-self-center">
-                        <img src="{{propService.properties[0].images[0].imageurl}}"
+                        <img src="{{property.images[0].imageurl}}"
                             class="img-fluid rounded-start ms-2 h-100" alt="img">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body mb-2">
                             <div class="row justify-content-between">
 
-                                <div class="col-8">
-                                    <a class="prop-name" routerLink="/property/{{propService.properties[0].id}}">
-                                        <h5 class="card-title">{{propService.properties[0].name}}</h5>
-                                    </a>
-                                    <h6 class="mt-3" style="font-size: 14px;"><span><img src="../../assets/Rounded.png"
-                                                alt="arrow"
-                                                class="img-fluid"></span>{{propService.properties[0].address.line1 + " "
-                                        + propService.properties[0].address.line2}}
-                                    </h6>
-                                    <p class="mt-4 card-price">{{propService.properties[0].price}}</p>
-
-                                    <div class="row justify-content-between mt-5">
-                                        <div class="col-6 aminities">
-                                            <div class="mb-5">
-                                                <span class="me-2">
-                                                    <img src="../../assets/newimglisting/Icon awesome-shower.png"
-                                                        alt="arrow" class="img-fluid"
-                                                        style="height: 25px" /></span>Finished Baths
+                                <div dir="rtl">
+                                    <div class="row">
+                                        <a class="prop-name" routerLink="/property/{{property.id}}">
+                                            <h2 class="mt-4 titledes">{{property.name}}</h2>
+                                        </a>
+                                        <h6 class="mt-3 featuredes">
+                                            <span>
+                                                <img src="../../assets/Rounded.png" alt="arrow" class="img-fluid" style="height: 20px" />
+                                            </span>
+                                            {{property.address.line1 + " " + property.address.line2}}
+                                        </h6>
+                                        <div class="d-flex">
+                                            <div dir="ltr" class="col-4 col-sm-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="img-fluid"><path d="M38.5 32.25v-16.5a5 5 0 10-6.25-6.25h-16.5a5 5 0 10-6.25 6.25v16.5a5 5 0 106.25 6.25h16.5a5 5 0 106.25-6.25zm-6.25 3.25h-16.5a5 5 0 00-3.25-3.25v-16.5a5 5 0 003.25-3.25h16.5a5 5 0 003.25 3.25v16.5a5 5 0 00-3.25 3.25zM37 9a2 2 0 11-2 2 2 2 0 012-2zM11 9a2 2 0 11-2 2 2 2 0 012-2zm0 30a2 2 0 112-2 2 2 0 01-2 2zm26 0a2 2 0 112-2 2 2 0 01-2 2z"></path></svg>
+                                                {{property.size}} m²
                                             </div>
-                                            <div class="mb-5">
-                                                <span class="me-2">
-                                                    <img src="../../assets/newimglisting/Icon ionic-ios-bed.png"
-                                                        alt="arrow" class="img-fluid"
-                                                        style="height: 25px" /></span>Bedrooms
-                                            </div>
-                                            <div>
-                                                <span class="me-2">
-                                                    <img src="../../assets/newimglisting/Icon ionic-md-tv.png"
-                                                        alt="arrow" class="img-fluid"
-                                                        style="height: 25px" /></span>Luxuries Livings
-                                            </div>
-                                        </div>
-                                        <div class="col-6 aminities">
-                                            <div class="mb-5">
-                                                <span class="me-2">
-                                                    <img src="../../assets/newimglisting/Icon awesome-parking.png"
-                                                        alt="arrow" class="img-fluid"
-                                                        style="height: 25px" /></span>Parking Space
-                                            </div>
-                                            <div class="mb-5">
-                                                <span class="me-2">
-                                                    <img src="../../assets/newimglisting/Icon map-park.png" alt="arrow"
-                                                        class="img-fluid" style="height: 25px" /></span>Play Area
-                                            </div>
-                                            <div>
-                                                <span class="me-2">
-                                                    <img src="../../assets/newimglisting/Icon map-tennis.png"
-                                                        alt="arrow" class="img-fluid"
-                                                        style="height: 25px" /></span>Tennis Court
+                                            <div dir="ltr" class="col-4 col-sm-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" role="presentation" viewBox="0 0 16 16" class="img-fluid"><path d="M9.13 15l-.53-.77a1.85 1.85 0 0 0-.28-2.54 3.51 3.51 0 0 1-1.19-2c-1.56 2.23-.75 3.46 0 4.55l-.55.76A4.4 4.4 0 0 1 3 10.46S2.79 8.3 5.28 6.19c0 0 2.82-2.61 1.84-4.54L7.83 1a6.57 6.57 0 0 1 2.61 6.94 2.57 2.57 0 0 0 .56-.81l.87-.07c.07.12 1.84 2.93.89 5.3A4.72 4.72 0 0 1 9.13 15zm-2-6.95l.87.39a3 3 0 0 0 .92 2.48 2.64 2.64 0 0 1 1 2.8A3.241 3.241 0 0 0 11.8 12a4.87 4.87 0 0 0-.41-3.63 1.85 1.85 0 0 1-1.84.86l-.35-.68a5.31 5.31 0 0 0-.89-5.8C8.17 4.87 6 6.83 5.93 6.94 3.86 8.7 4 10.33 4 10.4a3.47 3.47 0 0 0 1.59 3.14C5 12.14 5 10.46 7.16 8.05h-.03z"/></svg>
+                                                {{property.shares}} Shares
                                             </div>
                                         </div>
                                     </div>
+                                    <h6 class="mt-4 titledes">{{formatPrice(property.price)}}</h6>
                                 </div>
 
-                                <div class="col-4 position-relative">
+                                <!-- <div class="col-4 position-relative">
                                     <div class="row ">
-                                        <div class="col-12 w-100 ">
-                                            <span class="mx-2"
-                                                *ngFor="let star of stars.slice(0,propService.properties[0].avgRating), let i=index"
-                                                [class]="star"></span>
-                                        </div>
                                         <div class="col-12 w-100 position-absolute bottom-0">
                                             <button type="button" routerLink="/wishlist/{{auth.currentUser.userId}}"
                                                 class="btn btn-lgrey shadow-lg mb-3 w-100" aria-current="page">
@@ -111,17 +77,9 @@
                                                     favorite_border
                                                 </span>
                                             </button>
-                                            <button type="button" routerLink="/bookings/{{auth.currentUser.userId}}"
-                                                class="btn btn-green
-                                                shadow-lg w-100" aria-current="page">
-                                                BUY NOW
-                                                <span class="material-icons">
-                                                    navigate_next
-                                                </span>
-                                            </button>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                             </div>
                         </div>
@@ -133,27 +91,34 @@
 </div>
 
 <!-- Cards -->
-<div class="container-fluid my-5">
+<!-- <div class="container-fluid my-5">
     <div class="row g-4">
-        <div class="col-12 col-md-6" *ngFor="let property of propService.properties.slice(1)">
+        <div class="col-12 col-md-6" *ngFor="let property of propService.properties">
             <div class="card border-0 shadow-lg" style="border-radius: 15px;">
-                <img src="{{property.images[0].imageurl}}" class="card-img-top px-2 pt-2" alt="buildingimg" />
+                <img src="{{property.images[0].imageurl}}" class="card-img-top px-2 pt-2" alt="buildCaption(property.images[0].imageurl)" />
                 <div class="card-body d-flex justify-content-between">
                     <div class="px-2 pt-1">
-                        <a class="cardAminity" routerLink="/property/{{propService.properties[0].id}}">
-                            <h5 class="card-title">{{propService.properties[0].name}}</h5>
-                        </a>
-                        <h6 class="mt-3 featuredes" style="font-size: 14px;"><span><img src="../../assets/Rounded.png"
-                                    alt="arrow" class="img-fluid me-2"
-                                    style="height: 20px;"></span>{{property.address.line1 + " " +
-                            property.address.line2}}</h6>
-                        <h4 class="pt-3 pb-4 cardAminity">{{property.price}}</h4>
-                        <button type="button" routerLink="/bookings" class="btn blcolor my-3 me-3 px-4 py-3 shadow-lg"
-                            aria-current="page">
-                            BUY NOW
-                            <span><img src="../../assets/rightarrow.png" alt="arrow" class="img-fluid ms-5"
-                                    style="height: 20px" /></span>
-                        </button>
+                        <div dir="rtl">
+                            <div class="row">
+                                <a class="cardAminity" routerLink="/property/{{property.id}}">
+                                    <h2 class="mt-4 titledes">{{property.name}}</h2>
+                                </a>
+                                <h6 class="mt-3 featuredes">
+                                    <span>
+                                        <img src="../../assets/Rounded.png" alt="arrow" class="img-fluid" style="height: 20px" />
+                                    </span>
+                                    {{property.address.line1 + " " + property.address.line2}}
+                                </h6>
+                                <div dir="ltr" class="col-4 col-sm-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="img-fluid"><path d="M38.5 32.25v-16.5a5 5 0 10-6.25-6.25h-16.5a5 5 0 10-6.25 6.25v16.5a5 5 0 106.25 6.25h16.5a5 5 0 106.25-6.25zm-6.25 3.25h-16.5a5 5 0 00-3.25-3.25v-16.5a5 5 0 003.25-3.25h16.5a5 5 0 003.25 3.25v16.5a5 5 0 00-3.25 3.25zM37 9a2 2 0 11-2 2 2 2 0 012-2zM11 9a2 2 0 11-2 2 2 2 0 012-2zm0 30a2 2 0 112-2 2 2 0 01-2 2zm26 0a2 2 0 112-2 2 2 0 01-2 2z"></path></svg>
+                                    {{property.size}} m²
+                                </div>
+                            </div>
+                            <h6 class="mt-4 titledes">{{formatPrice(property.price)}}</h6>
+                            <div class="justify-content-start">
+                                <div [innerHtml]="property.description" class="me-2 mt-5 pe-5"></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="ms-3 me-4">
                         <h5 class="mb-4 mt-3 aminities" style="font-size: 14px;">
@@ -171,11 +136,9 @@
                                 <img src="../../assets/newimglisting/Icon ionic-md-tv.png" alt="arrow" class="img-fluid"
                                     style="height: 15px" /></span>Luxuries Livings
                         </h5>
-                        <div> <span class="mx-auto" *ngFor="let star of stars.slice(0,property.avgRating), let i=index"
-                                [class]="star"></span></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div> -->

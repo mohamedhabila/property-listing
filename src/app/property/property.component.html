@@ -33,8 +33,9 @@
             <a type="button" routerLink="/wishlist/{{auth.currentUser.userId}}"
                 class="btn bscolor my-3 me-3 px-4 py-3 shadow-lg" aria-current="page">
                 WISHLIST
-                <span><img src="../../assets/newimglisting/Icon ionic-ios-cart.png" alt="arrow" class="img-fluid ms-2"
-                        style="height: 20px" /></span>
+                <span class="material-icons">
+                    favorite_border
+                </span>
             </a>
         </div>
         <div *ngIf="auth.currentUser.userId==0">

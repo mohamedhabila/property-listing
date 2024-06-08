@@ -71,6 +71,7 @@ export class PropertyComponent implements OnInit {
   isValidEnquiry() : Boolean {
     return this.enquiry.numberOfShares <= this.propService.property.remShares;
   }
+
   formatPrice(price: number) : string{
     return price.toLocaleString(undefined, {
         style: 'currency',

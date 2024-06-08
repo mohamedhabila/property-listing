@@ -40,7 +40,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.2.0"
   },
-  "description": "`PL (Property-Listing)` is an online web application that serves as a single platform for property buyers and sellers in India to discover properties of interest.",
+  "description": "`PL (Property-Listing)` is an online web application that serves as a single platform for property buyers to discover properties of interest.",
   "main": "karma.conf.js",
   "author": "",
   "license": "ISC"
