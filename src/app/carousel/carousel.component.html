@@ -4,7 +4,7 @@
     </ol>
     <div class="carousel-inner">
       <div *ngFor="let image of images; let i = index" class="carousel-item" [class.active]="i === 0">
-        <img class="d-block w-100" [src]="image.imageurl" [alt]="buildCaption(image.imageurl)" (click)="openLightbox(i)">
+        <div class="d-block w-100 h-100 careousel-image" [ngStyle]="{'background-image': 'url(' + image.imageurl + ')'}" (click)="openLightbox(i)">
       </div>
     </div>
     <button class="carousel-control-prev" data-slide="prev" (click)="navigate($event, -1)">

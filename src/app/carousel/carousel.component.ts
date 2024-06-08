@@ -38,17 +38,9 @@ export class CarouselComponent {
     const carouselElement = document.getElementById('carouselExampleIndicators');
     if (carouselElement) {
       carouselElement.addEventListener('slid.bs.carousel', () => {
-        this.currentSlideIndex = this.getActiveIndex();
+        this.currentSlideIndex = 1;
       });
     }
-  }
-
-  getActiveIndex(): number {
-    const activeElement = document.querySelector('.carousel-item.active');
-    if (activeElement) {
-      return Array.from(activeElement.parentElement!.children).indexOf(activeElement);
-    }
-    return 0;
   }
 
   closeLightbox(): void {
@@ -60,15 +52,14 @@ export class CarouselComponent {
     const activeElement = document.querySelector('.carousel-item.active');
     if (activeElement) {
       let newActiveElement;
-      if (direction === -1) {
-        newActiveElement = activeElement.previousElementSibling || activeElement.parentElement?.lastElementChild;
-      } else {
-        newActiveElement = activeElement.nextElementSibling || activeElement.parentElement?.firstElementChild;
-      }
+      let children = Array.from(activeElement.parentElement!.children);
+      console.log(children);
+      let nxtIndex = (this.currentSlideIndex + direction + this.images.length)%this.images.length;
+      newActiveElement = children[nxtIndex];
       if (newActiveElement) {
         activeElement.classList.remove('active');
         newActiveElement.classList.add('active');
-        this.currentSlideIndex = this.getActiveIndex();
+        this.currentSlideIndex = nxtIndex;
       }
     }
   }

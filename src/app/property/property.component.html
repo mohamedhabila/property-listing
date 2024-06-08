@@ -37,10 +37,10 @@
                         style="height: 20px" /></span>
             </a>
         </div>
-        <div>
-            <a type="button" routerLink="/bookings/{{auth.currentUser.userId}}"
+        <div *ngIf="auth.currentUser.userId==0">
+            <a type="button" routerLink="/signin"
                 class="btn blcolor my-3 me-3 px-4 py-3 shadow-lg" aria-current="page">
-                BUY NOW
+                SIGN IN
                 <span><img src="../../assets/rightarrow.png" alt="arrow" class="img-fluid ms-2"
                         style="height: 20px" /></span>
             </a>
@@ -74,26 +74,61 @@
     </div> -->
     <!-- Review cards End-->
 
-    <!-- Review Form Start -->
+    <!-- enquiry Form Start -->
     <div class="container-fluid my-5">
-        <div class="card border-0 shadow-lg mx-5" style="border-radius: 15px;">
-            <h5 class="text-center mt-4">REVIEW</h5>
-            <form (ngSubmit)="userReview(reviewForm)" #reviewForm="ngForm">
-                <div class="my-4 mx-5">
-                    <label for="exampleInputEmail1" class="form-label"></label>
-                    <input type="text" name="userName" ngModel class="form-control py-3 review-des border-0"
-                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="USERNAME">
+        <div class="card border-0 shadow-lg mx-1" style="border-radius: 15px;">
+            <div class="bscolor mx-2 mt-4">
+                <h5 class="mt-4">This Property has {{propService.property.shares}} shares, every share is worth {{formatPrice(propService.property.price/propService.property.shares)}}.</h5>
+                <h5 class="mt-4" *ngIf="propService.property.shares > propService.property.remShares">{{propService.property.shares-propService.property.remShares}} out of {{propService.property.shares}} shares have been already sold.</h5>
+                <h5 class="mt-4">Please select below how many shares you want to buy!</h5>
+            </div>
+            <form (ngSubmit)="sendBuyEnquiry(enquiryForm)" #enquiryForm="ngForm">
+                <div class="my-4 mx-1">
+                    <label for="enquiryFullName" class="form-label"></label>
+                    <input type="text" [(ngModel)]="enquiry.fullName" #fullName="ngModel" name="fullName" class="form-control py-3 review-des border-0"
+                        id="enquiryFullName" placeholder="your full name" required>
+                        <p class="small text-danger my-2" *ngIf="fullName.dirty && fullName.invalid">
+                            Name can't be empty !
+                        </p>
                 </div>
-                <div class="mb-4 mx-5">
-                    <label for="exampleFormControlTextarea1" class="form-label"></label>
-                    <textarea name="review" ngModel class="form-control review-des border-0"
-                        id="exampleFormControlTextarea1" rows="3" placeholder="REVIEW"></textarea>
+                <div class="my-4 mx-1">
+                    <label for="enquiryPhoneNumber" class="form-label"></label>
+                    <input type="tel" [(ngModel)]="enquiry.phoneNumber" #phoneNumber="ngModel" name="phoneNumber" class="form-control py-3 review-des border-0"
+                        id="enquiryPhoneNumber" placeholder="your phone number" required>
+                    <p class="small text-danger my-2" *ngIf="phoneNumber.dirty && phoneNumber.invalid">
+                        Phone number can't be empty !
+                    </p>
                 </div>
-                <a type="button" class="btn blcolor mt-3 mb-5 ms-5 px-4 py-3 shadow-lg" aria-current="page">
-                    SUBMIT
+                <div class="my-4 mx-1 text-center">
+                    <label for="enquiryShares" class="form-label bscolor mx-1">Number of shares you want to buy!</label>
+                    <input type="range" [(ngModel)]="enquiry.numberOfShares" #numberOfShares="ngModel" name="numberOfShares" value = "1" min="1" max="{{propService.property.remShares}}" (input)="onSliderChange($event)" class="slider" id="enquiryShares">
+                    <div class="circle-container">
+                        <svg class="circle-svg">
+                            <circle cx="50" cy="50" r="45" class="circle-background"></circle>
+                            <circle cx="50" cy="50" r="45" class="circle-progress" [style.strokeDasharray]="computeDashArray(sliderValue)"></circle>
+                        </svg>
+                        <div class="circle-label">{{ sliderValue }}</div>
+                        <span class="bscolor">{{formatPrice(sliderValue * (propService.property.price/propService.property.shares))}}</span>
+                    </div>
+                </div>
+                <div class="mb-4 mx-1">
+                    <label for="enquirynotes" class="form-label"></label>
+                    <textarea name="notes" class="form-control review-des border-0"
+                        id="enquirynotes" rows="3" placeholder="notes"></textarea>
+                </div>   
+                <button type="submit" class="btn blcolor mt-3 mb-5 ms-5 px-4 py-3 shadow-lg" [disabled]="enquiryForm.pristine || enquiryForm.invalid">
+                    Send
                     <span><img src="../../assets/rightarrow.png" alt="arrow" class="img-fluid ms-3"
-                            style="height: 20px" /></span>
-                </a>
+                        style="height: 20px" /></span>
+                </button>
+                <div class="alert alert-danger d-flex align-items-center mt-4" role="alert" *ngIf="errorFlag">
+                    <i class="material-icons"> warning </i>
+                    <div class="ms-2">Sorry we encountered a problem, please try again!</div>
+                </div>
+                <div class="alert alert-success d-flex align-items-center mt-4" role="alert" *ngIf="successFlag">
+                    <i class="checkmark">✓</i>
+                    <div class="ms-2">We have received your request and will contact you shortly!</div>
+                </div>
             </form>
         </div>
     </div>

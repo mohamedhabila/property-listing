@@ -7,17 +7,20 @@
 
 .carousel-inner {
   height: 60vh;
+  background-color: #e5e5e5;
 }
 
 .carousel-item {
   height: 100%;
+  width: 100%;
 }
 
-.carousel-item img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover; /* Ensure images cover the area without distorting the aspect ratio */
+.careousel-image {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
 }
+
 
 /* Adjustments for different screen sizes */
 @media (max-width: 1200px) {
