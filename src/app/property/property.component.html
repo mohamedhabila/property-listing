@@ -122,7 +122,7 @@
                 </div>
                 <div class="mb-4 mx-1">
                     <label for="enquirynotes" class="form-label"></label>
-                    <textarea name="notes" class="form-control review-des border-0"
+                    <textarea name="notes" [(ngModel)]="enquiry.notes" class="form-control review-des border-0"
                         id="enquirynotes" rows="3" placeholder="notes"></textarea>
                 </div>   
                 <button type="submit" class="btn blcolor mt-3 mb-5 ms-5 px-4 py-3 shadow-lg" [disabled]="enquiryForm.pristine || enquiryForm.invalid">
