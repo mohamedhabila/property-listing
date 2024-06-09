@@ -50,7 +50,7 @@ export class PropertyComponent implements OnInit {
 
   initData(data: any) {
     this.propService.property = data;
-    this.enquiry.property_id = data.id
+    this.enquiry.propertyId = data.id
     this.popUpText = data.remShares + ` Share` + (data.remShares > 1 ? 's are' : ' is') + ` available to buy!`;
     this.popUpDescription = `<h5 class="mt-4">This Property has ` + data.shares + ` shares, every share is worth ` + this.formatPrice(data.price/data.shares) + ` .</h5>
                     <h5 class="mt-4">Please select below how many shares you want to buy!</h5>`;
