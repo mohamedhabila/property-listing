@@ -104,9 +104,9 @@
 
 .circle-container {
   position: relative;
-  width: 100px;
+  width: 180px;
   height: 100px;
-  left: calc(50% - 50px);
+  left: calc(50% - 90px);
 }
 
 .circle-svg {
@@ -137,4 +137,9 @@
   transform: translate(-50%, -50%);
   font-size: 18px;
   font-weight: bold;
+}
+
+.info-wrap {
+  text-align: right;
+  flex-direction: row-reverse;
 }

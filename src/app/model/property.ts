@@ -17,6 +17,7 @@ export class Property {
     shares: number
     remShares: number
     size: number
+    rooms: number
 
     constructor() {
         this.id = 0;
@@ -33,5 +34,6 @@ export class Property {
         this.shares = 0;
         this.remShares = 0;
         this.size = 0;
+        this.rooms = 0;
     }
 }

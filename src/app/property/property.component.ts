@@ -6,7 +6,6 @@ import { CategoryService } from '../services/category.service';
 import { DataSharingService } from '../services/data-sharing.service';
 import { LocationService } from '../services/location.service';
 import { PropertyService } from '../services/property.service';
-import { Image } from '../model/image';
 import { Enquiry } from '../model/enquiry';
 import { EnquiryService } from '../services/enquiry.service';
 
@@ -44,7 +43,7 @@ export class PropertyComponent implements OnInit {
 
   setProperty() {
     const propertyId = Number(this.route.snapshot.paramMap.get('propertyId'));
-    this.propService.getPropertyById(propertyId).subscribe((data: Property) => { this.propService.property = data });
+    this.propService.getPropertyById(propertyId).subscribe((data: Property) => { this.propService.property = data; this.enquiry.propertyId = data.id });
   }
 
   sendBuyEnquiry(enquiryForm: any) {
