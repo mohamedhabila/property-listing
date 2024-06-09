@@ -22,6 +22,7 @@ import { ListingNameComponent } from './listing-name/listing-name.component';
 import { ListingTypeComponent } from './listing-type/listing-type.component';
 import { LightboxModule } from 'ngx-lightbox';
 import { CarouselComponent } from './carousel/carousel.component';
+import { InfoPopupComponent } from './info-popup/info-popup.component'; 
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home/1', pathMatch: 'full' },
@@ -64,7 +65,8 @@ export const routes: Routes = [
     ListingLocationComponent,
     ListingNameComponent,
     ListingTypeComponent,
-    CarouselComponent
+    CarouselComponent,
+    InfoPopupComponent
   ],
   imports: [
     BrowserModule,

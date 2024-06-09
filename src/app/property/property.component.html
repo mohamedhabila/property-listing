@@ -89,9 +89,7 @@
     <div class="container-fluid my-5">
         <div class="card border-0 shadow-lg mx-1" style="border-radius: 15px;">
             <div class="bscolor mx-2 mt-4">
-                <h5 class="mt-4">This Property has {{propService.property.shares}} shares, every share is worth {{formatPrice(propService.property.price/propService.property.shares)}}.</h5>
-                <h5 class="mt-4" *ngIf="propService.property.shares > propService.property.remShares">{{propService.property.shares-propService.property.remShares}} out of {{propService.property.shares}} shares have been already sold.</h5>
-                <h5 class="mt-4">Please select below how many shares you want to buy!</h5>
+                <app-info-popup [text]="popUpText" [description]="popUpDescription"></app-info-popup>
             </div>
             <form (ngSubmit)="sendBuyEnquiry(enquiryForm)" #enquiryForm="ngForm">
                 <div class="my-4 mx-1">

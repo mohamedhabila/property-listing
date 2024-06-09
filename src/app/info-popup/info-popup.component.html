@@ -1,0 +1,9 @@
+<div class="info-container">
+    <span class="info-icon" (click)="togglePopup()">i</span>
+    <span class="info-text" (click)="togglePopup()">{{text}}</span>
+    <div *ngIf="isPopupVisible" class="popup">
+        <div [innerHTML]="description"></div>
+      <button (click)="togglePopup()">Close</button>
+    </div>
+  </div>
+  
