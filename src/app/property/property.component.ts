@@ -45,9 +45,14 @@ export class PropertyComponent implements OnInit {
 
   setProperty() {
     const propertyId = Number(this.route.snapshot.paramMap.get('propertyId'));
-    this.propService.getPropertyById(propertyId).subscribe((data: Property) => { this.propService.property = data; this.enquiry.propertyId = data.id });
-    this.popUpText = this.propService.property.remShares + ` Share` + (this.propService.property.remShares > 1 ? 's are' : 'is') + ` available to buy!`;
-    this.popUpDescription = `<h5 class="mt-4">This Property has ` + this.propService.property.shares + ` shares, every share is worth ` + this.formatPrice(this.propService.property.price/this.propService.property.shares) + ` .</h5>
+    this.propService.getPropertyById(propertyId).subscribe((data: Property) => { this.initData(data) });
+  }
+
+  initData(data: any) {
+    this.propService.property = data;
+    this.enquiry.propertyId = data.id
+    this.popUpText = data.remShares + ` Share` + (data.remShares > 1 ? 's are' : ' is') + ` available to buy!`;
+    this.popUpDescription = `<h5 class="mt-4">This Property has ` + data.shares + ` shares, every share is worth ` + this.formatPrice(data.price/data.shares) + ` .</h5>
                     <h5 class="mt-4">Please select below how many shares you want to buy!</h5>`;
   }
 
