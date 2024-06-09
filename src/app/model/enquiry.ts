@@ -3,14 +3,14 @@ export class Enquiry {
     phoneNumber: string;
     numberOfShares: number;
     notes: string;
-    propertyId: number;
+    property_id: number;
   
     constructor() {
       this.fullName = '';
       this.phoneNumber = '';
       this.numberOfShares = 0;
       this.notes = '';
-      this.propertyId = 0;
+      this.property_id = 0;
     }
   }
   
